@@ -19,5 +19,9 @@ import './commands'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 before(function(){
+    const number = Math.random(5)
+console.log(number)
+    cy.task('log', number);
     cy.visit('https://example.cypress.io/todo')
+    // cy.visit('https://example.cypress.io/todo')
 })
